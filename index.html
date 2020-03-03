@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <p>{{name}}</p>
+        <p k-text='name'></p>
+        <p>{{age}}</p>
+        <input type="text" k-model='name'>
+        <button @click='changeName'>点击改变名称</button>
+        <div k-html='html'></div>
+    </div>
+    <script src='./compile.js'></script>
+    <script src='./index.js'></script>
+    <script>
+        var app = new KVue({
+            el: '#app',
+            data: {
+                name: 'jack',
+                age: 13,
+                html: '<button>html解析按钮</button>'
+            },
+            created () {
+                console.log(this.name);
+                setTimeout(() => {
+                    this.name = '1秒后自动修改名称'
+                },1000)
+            },
+            methods: {
+                changeName: function(){
+                    this.name = 'modify name later'
+                }
+            }
+        })
+    </script>
+</body>
+</html>
