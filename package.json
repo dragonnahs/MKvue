@@ -1,0 +1,19 @@
+{
+  "name": "mkvue",
+  "version": "1.0.0",
+  "description": "内容如下sfasfdaewre",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dragonnahs/MKvue.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dragonnahs/MKvue/issues"
+  },
+  "homepage": "https://github.com/dragonnahs/MKvue#readme"
+}
